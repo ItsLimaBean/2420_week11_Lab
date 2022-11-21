@@ -7,12 +7,14 @@
 
 source "./config"
 
-for i in "${BACKUP_DIRS[@]}"
+for i in "${#BACKUP_DIRS[@]}"
 do
-    if [ -d "${BACKUP_DIRS[i]}" ]
+    if [ -d "$i" ]
     then
-        rsync -aPv ${BACKUP_DIRS[i]} $BACKUP_IP:$BACKUP_LOCATION
+        rsync -aPv $i "$BACKUP_IP:$BACKUP_LOCATION"
     else
-        printf "Cannot find directory ${BACKUP_DIRS[i]}."
+        echo "Cannot find directory $i."
     fi
 done
+
+echo "Done backing up."
