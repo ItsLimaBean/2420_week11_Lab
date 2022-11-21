@@ -1,0 +1,11 @@
+#!/bin/bash
+# Template config file.
+
+# Directories you would like to backup.
+BACKUP_DIR=("/home/user/important_files")
+
+# Location where backups should be stored on the backup server.
+BACKUP_LOCATION="/home/user/backups/"
+
+# IP Adress of backup server.
+BACKUP_IP="user@127.0.0.1"

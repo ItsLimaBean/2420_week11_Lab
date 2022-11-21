@@ -1,0 +1,18 @@
+#!/bin/bash 
+#: Title        : backup-script
+#: Date         : Nov 20, 2022
+#: Authors      : Liam Brooke, Karl Cue
+#: Version      : 1.0
+#: Description  : Backs up to the specified location.
+
+source "./config"
+
+for i in "${BACKUP_DIRS[@]}"
+do
+    if [ -d "${BACKUP_DIRS[i]}" ]
+    then
+        rsync -aPv ${BACKUP_DIRS[i]} $BACKUP_IP:$BACKUP_LOCATION
+    else
+        printf "Cannot find directory ${BACKUP_DIRS[i]}."
+    fi
+done
