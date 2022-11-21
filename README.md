@@ -10,7 +10,7 @@
 1. Navigate to `/opt/`
 2. Create a folder called `backup-script`
 3. Place the `backup-script` file and `config` in that folder
-4. Add execution permissions using `chmod u+x backup-script config`
+4. Add execution permissions using `chmod +x backup-script config`
 
 ### Configuring the script
 
@@ -33,4 +33,4 @@ The scripts backup script is located in the config besides the script.
 4. Enable the service with `sudo systemctl enable backup.service`
 5. Enable the timer with `sudo systemctl enable backup.timer`
 6. Check the status using `sudo systemctl status backup.service` and `sudo systemctl status backup.timer`
-7. If there are no error, you've successfully installed the service and timer needed.
+7. If there are no errors, you've successfully installed the service and timer needed.
