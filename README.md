@@ -1,5 +1,8 @@
 # 2420 Week 11 Lab
 
+Liam Brooke
+Karl Cue
+
 ## Backup Script
 
 ### Setting up ssh keys
